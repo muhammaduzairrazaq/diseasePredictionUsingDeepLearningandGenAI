@@ -9,27 +9,28 @@ adax = Adax()
 
 
 class ReactView(APIView):
-    prev_session_id = previous_session_id
-
     def post(self, request):
         session_id = request.data.get('session_id')
-        # self.prev_session_id = previous_session_id
-        print(f'SESSION ID {session_id}')
-        # print(f'PREVIOUS SESSION ID {self.prev_session_id}')
         if session_id == '1':
             # reset chat template
             print('RESETING CHAT')
             adax.reset()
-        previous_session_id = session_id
-        # print(f'PREVIOUS SESSION ID {previous_session_id}')
         query = request.data.get('query')
-        query += " Note: Give me concise reply."
+        format_template = """
+        Write a response without using bold words, headings, list. \
+        Use sentence case. \
+        Dont use any symbols in your response like `<`, `>`, `%`, `$`, `&` `-`, `*` etc. \
+        """
+        query += f" Note: Give me concise reply. Don't provide all symptoms at once. Follow the format {format_template}"
         # passing the query to chatbot
         response = adax.chat(query)
-        if 'processing your reported symptoms' in response:
+            
+        if 'Okay, I\'m processing your reported symptoms. Your report will be reviewed shortly.' in response:
             if len(adax.reported_symptoms) <= 3:
                 time.sleep(2)
-                return Response('Please provide additional symptoms to enhance the accuracy of your diagnosis.')
+                response = 'Please provide additional symptoms to enhance the accuracy of your diagnosis.'
+                dic = {'response': response}
+                return JsonResponse(dic)
             else:
                 # initiate report generation
                 dic = adax.disease_prediction()

@@ -4,6 +4,7 @@ from .neuralNetwork import *
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
+import re
 
 load_dotenv()
 TOGETHER_API_KEY = os.getenv('API_KEY')
@@ -22,7 +23,8 @@ class Adax:
                 {
                     "role": "system",
                     "content": f"""
-            You are 'Adax', a supportive medical assistant chatbot here to assist users with their symptoms. \
+            You are 'Adax', a supportive medical assistant chatbot here to help and assist users with their symptoms. \
+            Don't use any words like I can't help you as it would depress the user. \
             Start with a professional greeting; you can use emojis. \
             If the user has entered symptoms in the query then look for related symptoms in this dataset {symptom_dataset} and fetch the related symptoms and give them as suggestions in your response. \
             Don't pass comments on disease diagnosis just try to get more symptoms from the user. \
@@ -33,7 +35,8 @@ class Adax:
             If the user indicates they've shared all their symptoms, respond with, "Okay, I'm processing \
             your reported symptoms. Your report will be reviewed shortly." Respect the user's decision. \
             Always maintain a professional tone. Your task is to engage users in conversation, \
-            asking about their symptoms. Avoid sharing the user's message in your reply. """,
+            asking about their symptoms. Avoid sharing the user's message in your reply. \
+                """,
                 }
             ],
             "model": "mistralai/Mixtral-8x7B-Instruct-v0.1"  # chat model
@@ -54,7 +57,7 @@ class Adax:
         self.complete_args['messages'].append(
             {'role': 'assistant', 'content': f"{chat_completion.choices[0].message.content}"})
         return chat_completion.choices[0].message.content
-
+    
     # fetch reported symptoms in the user query and store it
     def fetch_reported_symptoms(self, query, suggestion=False):
         for symptom in symptom_dataset:
@@ -77,11 +80,11 @@ class Adax:
             if s not in self.reported_symptoms:
                 negative_symptoms.append(s)
         return {
-            "symptoms": self.reported_symptoms,
-            "negativesymptoms": negative_symptoms,
-            "disease": disease,
+            "symptoms": [s.title() for s in self.reported_symptoms],
+            "negativesymptoms": [s.title() for s in negative_symptoms],
+            "disease": disease.title(),
             "description": description,
-            "precaution": precaution,
+            "precaution": [p.title() for p in precaution],
         }
 
     # conversation with chatbot
@@ -94,6 +97,8 @@ class Adax:
         print(f'REPORTED SYMPTOMS: {self.reported_symptoms}')
         model_response = self.invoke_llm(query)
         self.fetch_reported_symptoms(model_response, suggestion=True)
+        pattern = r"(?:Confidence:|\(Note:).*"
+        model_response = re.sub(pattern, "", model_response)
         return model_response
 
 

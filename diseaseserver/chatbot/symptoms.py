@@ -1,5 +1,3 @@
-previous_session_id = ""
-
 symptom_dataset = ['itching', 'skin rash', 'nodal skin eruptions',
                    'continuous sneezing', 'shivering', 'chills', 'joint pain',
                    'stomach pain', 'acidity', 'ulcers on tongue', 'muscle wasting',
