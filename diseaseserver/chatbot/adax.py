@@ -32,14 +32,15 @@ class Adax:
             If the user asks anything unrelated to health, respond with, "I am a medical bot and can't help you here" Don't answer such queries at any cost. \
             When a user reports symptoms, ask if they have more symptoms to share. \
             Don't end the conversation until the user ends it. \
-            If the user indicates they've shared all their symptoms, respond with, "Okay, I'm processing \
-            your reported symptoms. Your report will be reviewed shortly." Respect the user's decision. \
+            If the user indicates he has shared all his symptoms, then only respond with the message in backticks don't add anything else, \
+            ```Okay, I'm processing your reported symptoms. Your report will be reviewed shortly.``` Respect the user's decision. \
             Always maintain a professional tone. Your task is to engage users in conversation, \
             asking about their symptoms. Avoid sharing the user's message in your reply. \
                 """,
                 }
             ],
-            "model": "mistralai/Mixtral-8x7B-Instruct-v0.1"  # chat model
+            # "model": "mistralai/Mixtral-8x7B-Instruct-v0.1"  # chat model
+            "model": "meta-llama/Llama-3-70b-chat-hf" # performing far better
         }
 
     # reset template for new conversation
@@ -64,8 +65,12 @@ class Adax:
             if symptom in query:
                 if suggestion:
                     self.suggested_symptoms.append(symptom)
+                    self.suggested_symptoms = set(self.suggested_symptoms)
+                    self.suggested_symptoms = list(self.suggested_symptoms)
                 else:
                     self.reported_symptoms.append(symptom)
+                    self.reported_symptoms = set(self.reported_symptoms)
+                    self.reported_symptoms = list(self.reported_symptoms)
 
     # initiating model to predict disease
     def disease_prediction(self):
@@ -80,11 +85,11 @@ class Adax:
             if s not in self.reported_symptoms:
                 negative_symptoms.append(s)
         return {
-            "symptoms": [s.title() for s in self.reported_symptoms],
-            "negativesymptoms": [s.title() for s in negative_symptoms],
-            "disease": disease.title(),
+            "symptoms": [str(s).title() for s in self.reported_symptoms],
+            "negativesymptoms": [str(s).title() for s in negative_symptoms],
+            "disease": str(disease).title(),
             "description": description,
-            "precaution": [p.title() for p in precaution],
+            "precaution": [str(p).title() for p in precaution],
         }
 
     # conversation with chatbot

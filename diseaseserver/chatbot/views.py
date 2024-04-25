@@ -17,15 +17,14 @@ class ReactView(APIView):
             adax.reset()
         query = request.data.get('query')
         format_template = """
-        Write a response without using bold words, headings, list. \
-        Use sentence case. \
+        Write a response without using bold words, headings, or list. \
         Dont use any symbols in your response like `<`, `>`, `%`, `$`, `&` `-`, `*` etc. \
         """
-        query += f" Note: Give me concise reply. Don't provide all symptoms at once. Follow the format {format_template}"
+        query += f" Note: Don't provide all symptom suggestions at once. Follow the format while writing a reply ```{format_template}```"
         # passing the query to chatbot
         response = adax.chat(query)
-            
-        if 'Okay, I\'m processing your reported symptoms. Your report will be reviewed shortly.' in response:
+
+        if 'okay, i\'m processing your reported symptoms. your report will be reviewed shortly.' in response.lower():
             if len(adax.reported_symptoms) <= 3:
                 time.sleep(2)
                 response = 'Please provide additional symptoms to enhance the accuracy of your diagnosis.'
@@ -35,7 +34,7 @@ class ReactView(APIView):
                 # initiate report generation
                 dic = adax.disease_prediction()
                 dic['response'] = response
-                return JsonResponse(dic) 
+                return JsonResponse(dic)
 
         # time.sleep(2)
         # response = 'hello i got you baby...'
