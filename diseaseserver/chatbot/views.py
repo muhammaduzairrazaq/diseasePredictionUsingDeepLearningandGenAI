@@ -94,6 +94,25 @@ class DeleteReportView(APIView):
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+# View for deleting user account
+class DeleteAccountView(APIView):
+    def post(self, request):
+        # Retrieve email id from request data
+        email = request.data.get('email')
+
+        # Validate email id
+        if not email:
+            return Response({'error': 'Email is required'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        try:
+            # Call delete_disease_reports method to delete report
+            response = User.delete_account(email)
+            return JsonResponse(response)
+        
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
 # View for chat messages
 class ReactView(APIView):
     def post(self, request):

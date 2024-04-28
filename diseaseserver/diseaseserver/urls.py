@@ -25,5 +25,6 @@ urlpatterns = [
     path('adax/signup/', UserRegistrationView.as_view(), name='signup'),
     path('adax/signin/', UserVerificationView.as_view(), name='signin'),
     path('adax/diseaseprofile/', DiseaseReportView.as_view(), name='profile'),
-    path('adax/deletereport/', DeleteReportView.as_view(), name='delete'),
+    path('adax/deletereport/', DeleteReportView.as_view(), name='deletereport'),
+    path('adax/deleteaccount/', DeleteAccountView.as_view(), name='deleteaccount'),
 ]

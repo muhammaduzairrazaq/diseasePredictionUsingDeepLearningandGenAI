@@ -1,10 +1,24 @@
 from django.db import models
 import json
 from rest_framework import status
+from django.core.exceptions import ObjectDoesNotExist
+
 
 class User(models.Model):
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=100)
+    
+    @classmethod
+    def delete_account(cls, email):
+        try:
+            print(email)
+            user = cls.objects.get(email=email)
+            user.delete()
+            return {'message': 'Account deleted successfully'}
+        except ObjectDoesNotExist:
+            return {'error': 'User with the provided email does not exist'}, status.HTTP_404_NOT_FOUND
+        except Exception as e:
+            return {'error': str(e)}, status.HTTP_500_INTERNAL_SERVER_ERROR
 
 
 class DiseaseReport(models.Model):
