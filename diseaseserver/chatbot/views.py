@@ -76,6 +76,24 @@ class DiseaseReportView(APIView):
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+# View for deleting disease reports
+class DeleteReportView(APIView):
+    def post(self, request):
+        # Retrieve report_id from request data
+        report_id = request.data.get('report_id')
+
+        # Validate report id
+        if not report_id:
+            return Response({'error': 'Report ID is required'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        try:
+            # Call delete_disease_reports method to delete report
+            response = DiseaseReport.delete_disease_reports(report_id)
+            return JsonResponse(response)
+        
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 # View for chat messages
 class ReactView(APIView):
     def post(self, request):
