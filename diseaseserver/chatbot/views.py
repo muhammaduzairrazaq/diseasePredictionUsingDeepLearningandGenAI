@@ -1,13 +1,63 @@
 from django.http import JsonResponse
+from chatbot.models import User
 from rest_framework.views import APIView
+from django.db import IntegrityError
 from rest_framework.response import Response
+from rest_framework import status
 from .adax import Adax
 from .symptoms import *
 import time
 
 adax = Adax()
 
+# View for user registration
+class UserRegistrationView(APIView):
+    def post(self, request):
+        # Retrieve email and password from request data
+        email = request.data.get('email')
+        password = request.data.get('password')
+        print(f'email {email}')
+        print(f'password {password}')
+        # Validate email and password
+        if not email or not password:
+            return Response({'error': 'Email and password are required'}, status=status.HTTP_400_BAD_REQUEST)
+        # Create user object
+        try:
+            user = User(email=email, password=password)
+            user.save()
+            return Response({'message': 'User account created successfully'}, status=status.HTTP_201_CREATED)
+        except IntegrityError:
+            print('error integrity.......')
+            return Response({'error': 'Email already exists'}, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            print('error.......')
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+# View for user verification
+class UserVerificationView(APIView):
+    def post(self, request):
+        # Retrieve email and password from request data
+        email = request.data.get('email')
+        password = request.data.get('password')
+        
+        # Validate email and password
+        if not email or not password:
+            return Response({'error': 'Email and password are required'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        try:
+            # Retrieve user object
+            user = User.objects.get(email=email)
+            # Check if the provided password matches the stored password
+            if password == user.password:
+                return Response({'message': 'User account verified successfully'}, status=status.HTTP_200_OK)
+            else:
+                return Response({'error': 'Invalid password'}, status=status.HTTP_401_UNAUTHORIZED)
+        except User.DoesNotExist:
+            return Response({'error': 'User does not exist'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+# View for chat messages
 class ReactView(APIView):
     def post(self, request):
         session_id = request.data.get('session_id')
@@ -25,7 +75,7 @@ class ReactView(APIView):
         response = adax.chat(query)
 
         if 'okay, i\'m processing your reported symptoms. your report will be reviewed shortly.' in response.lower():
-            if len(adax.reported_symptoms) <= 3:
+            if len(adax.reported_symptoms) <= 2:
                 time.sleep(2)
                 response = 'Please provide additional symptoms to enhance the accuracy of your diagnosis.'
                 dic = {'response': response}

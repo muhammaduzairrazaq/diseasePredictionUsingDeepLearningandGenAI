@@ -21,5 +21,7 @@ from chatbot.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', ReactView.as_view(), name='chatbotview')
+    path('', ReactView.as_view(), name='chatbotview'),
+    path('adax/signup/', UserRegistrationView.as_view(), name='signup'),
+    path('adax/signin/', UserVerificationView.as_view(), name='signup'),
 ]
