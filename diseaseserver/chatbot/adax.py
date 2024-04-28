@@ -1,6 +1,7 @@
 import time
 from .symptoms import *
 from .neuralNetwork import *
+from chatbot.models import DiseaseReport
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
@@ -40,7 +41,7 @@ class Adax:
                 }
             ],
             # "model": "mistralai/Mixtral-8x7B-Instruct-v0.1"  # chat model
-            "model": "meta-llama/Llama-3-70b-chat-hf" # performing far better
+            "model": "meta-llama/Llama-3-70b-chat-hf"  # performing far better
         }
 
     # reset template for new conversation
@@ -49,7 +50,7 @@ class Adax:
         self.reported_symptoms = []
         self.suggested_symptoms = []
 
-    # calling the llm with user query 
+    # calling the llm with user query
     def invoke_llm(self, prompt):
         self.complete_args['messages'].append(
             {'role': 'user', 'content': f"{prompt}"})
@@ -58,7 +59,7 @@ class Adax:
         self.complete_args['messages'].append(
             {'role': 'assistant', 'content': f"{chat_completion.choices[0].message.content}"})
         return chat_completion.choices[0].message.content
-    
+
     # fetch reported symptoms in the user query and store it
     def fetch_reported_symptoms(self, query, suggestion=False):
         for symptom in symptom_dataset:
@@ -73,7 +74,7 @@ class Adax:
                     self.reported_symptoms = list(self.reported_symptoms)
 
     # initiating model to predict disease
-    def disease_prediction(self):
+    def disease_prediction(self, user):
         neural = NeuralNetwork()
         disease = neural.predict(self.reported_symptoms)
         description = neural.disease_description(disease)
@@ -84,12 +85,23 @@ class Adax:
         for s in self.suggested_symptoms:
             if s not in self.reported_symptoms:
                 negative_symptoms.append(s)
+        if len(negative_symptoms) <= 0:
+            negative_symptoms.append('None')
+
+        symptoms = [str(s).title() for s in self.reported_symptoms]
+        negativesymptoms = [str(s).title() for s in negative_symptoms]
+        disease = str(disease).title()
+        precaution = [str(p).title() for p in precaution]
+
+        # Storing disease report in database
+        DiseaseReport.add_disease_report(user=user, disease_name=disease, positive_symptoms=symptoms,
+                                                  negative_symptoms=negativesymptoms, description=description, precautions=precaution)
         return {
-            "symptoms": [str(s).title() for s in self.reported_symptoms],
-            "negativesymptoms": [str(s).title() for s in negative_symptoms],
-            "disease": str(disease).title(),
+            "symptoms": symptoms,
+            "negativesymptoms": negativesymptoms,
+            "disease": disease,
             "description": description,
-            "precaution": [str(p).title() for p in precaution],
+            "precaution": precaution,
         }
 
     # conversation with chatbot

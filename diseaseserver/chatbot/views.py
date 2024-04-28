@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from chatbot.models import User
+from chatbot.models import *
 from rest_framework.views import APIView
 from django.db import IntegrityError
 from rest_framework.response import Response
@@ -57,10 +57,30 @@ class UserVerificationView(APIView):
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+# View for fetching disease reports
+class DiseaseReportView(APIView):
+    def post(self, request):
+        # Retrieve email from request data
+        email = request.data.get('email')
+        
+        # Validate email
+        if not email:
+            return Response({'error': 'Email is required'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        try:
+            # Call get_all_attributes method to retrieve user attributes
+            attributes_list = DiseaseReport.get_disease_reports(email)
+            report = {}
+            report['report_list'] = attributes_list
+            return JsonResponse(report, safe=False)  # Set safe=False to allow serializing lists
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 # View for chat messages
 class ReactView(APIView):
     def post(self, request):
         session_id = request.data.get('session_id')
+        email = request.data.get('email')
         if session_id == '1':
             # reset chat template
             print('RESETING CHAT')
@@ -82,7 +102,8 @@ class ReactView(APIView):
                 return JsonResponse(dic)
             else:
                 # initiate report generation
-                dic = adax.disease_prediction()
+                user = User.objects.get(email=email)
+                dic = adax.disease_prediction(user)
                 dic['response'] = response
                 return JsonResponse(dic)
 
