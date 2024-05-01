@@ -11,6 +11,8 @@ import time
 adax = Adax()
 
 # View for user registration
+
+
 class UserRegistrationView(APIView):
     def post(self, request):
         # Retrieve email and password from request data
@@ -32,18 +34,20 @@ class UserRegistrationView(APIView):
         except Exception as e:
             print('error.......')
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        
+
 # View for user verification
+
+
 class UserVerificationView(APIView):
     def post(self, request):
         # Retrieve email and password from request data
         email = request.data.get('email')
         password = request.data.get('password')
-        
+
         # Validate email and password
         if not email or not password:
             return Response({'error': 'Email and password are required'}, status=status.HTTP_400_BAD_REQUEST)
-        
+
         try:
             # Retrieve user object
             user = User.objects.get(email=email)
@@ -58,25 +62,30 @@ class UserVerificationView(APIView):
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # View for fetching disease reports
+
+
 class DiseaseReportView(APIView):
     def post(self, request):
         # Retrieve email from request data
         email = request.data.get('email')
-        
+
         # Validate email
         if not email:
             return Response({'error': 'Email is required'}, status=status.HTTP_400_BAD_REQUEST)
-        
+
         try:
             # Call get_all_attributes method to retrieve user attributes
             attributes_list = DiseaseReport.get_disease_reports(email)
             report = {}
             report['report_list'] = attributes_list
-            return JsonResponse(report, safe=False)  # Set safe=False to allow serializing lists
+            # Set safe=False to allow serializing lists
+            return JsonResponse(report, safe=False)
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # View for deleting disease reports
+
+
 class DeleteReportView(APIView):
     def post(self, request):
         # Retrieve report_id from request data
@@ -85,16 +94,18 @@ class DeleteReportView(APIView):
         # Validate report id
         if not report_id:
             return Response({'error': 'Report ID is required'}, status=status.HTTP_400_BAD_REQUEST)
-        
+
         try:
             # Call delete_disease_reports method to delete report
             response = DiseaseReport.delete_disease_reports(report_id)
             return JsonResponse(response)
-        
+
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # View for deleting user account
+
+
 class DeleteAccountView(APIView):
     def post(self, request):
         # Retrieve email id from request data
@@ -103,12 +114,12 @@ class DeleteAccountView(APIView):
         # Validate email id
         if not email:
             return Response({'error': 'Email is required'}, status=status.HTTP_400_BAD_REQUEST)
-        
+
         try:
             # Call delete_disease_reports method to delete report
             response = User.delete_account(email)
             return JsonResponse(response)
-        
+
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -116,15 +127,14 @@ class DeleteAccountView(APIView):
 # View for chat messages
 class ReactView(APIView):
     def post(self, request):
-        dic = {'response': 'chal ba chomo'}
-        return JsonResponse(dic)
         session_id = request.data.get('session_id')
+        print('Reterived session id: ', session_id)
         email = request.data.get('email')
         if session_id == '1':
             # reset chat template
             print('RESETING CHAT')
             adax.reset()
-        query = request.data.get('query')
+        query = request.data.get('query').lower()
         format_template = """
         Write a response without using bold words, headings, or list. \
         Dont use any symbols in your response like `<`, `>`, `%`, `$`, `&` `-`, `*` etc. \

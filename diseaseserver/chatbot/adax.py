@@ -91,7 +91,8 @@ class Adax:
         symptoms = [str(s).title() for s in self.reported_symptoms]
         negativesymptoms = [str(s).title() for s in negative_symptoms]
         disease = str(disease).title()
-        precaution = [str(p).title() for p in precaution]
+        precaution = [str(p).capitalize() for p in precaution]
+        description = str(description).capitalize()
 
         # Storing disease report in database
         DiseaseReport.add_disease_report(user=user, disease_name=disease, positive_symptoms=symptoms,
