@@ -116,6 +116,8 @@ class DeleteAccountView(APIView):
 # View for chat messages
 class ReactView(APIView):
     def post(self, request):
+        dic = {'response': 'chal ba chomo'}
+        return JsonResponse(dic)
         session_id = request.data.get('session_id')
         email = request.data.get('email')
         if session_id == '1':
@@ -149,4 +151,5 @@ class ReactView(APIView):
         # print(f'QUERY FROM USER: {query}')
         # print(f'RESPONSE GIVEN TO USER: {response}')
         dic = {'response': response}
+        print(dic)
         return JsonResponse(dic)
