@@ -1,8 +1,9 @@
-import pickle
 import pandas as pd
+import numpy as np
+from keras.models import load_model
+import tensorflow as tf
+from tensorflow import keras
 from .symptoms import *
-# import symptoms as symp
-
 
 class NeuralNetwork:
 
@@ -20,34 +21,37 @@ class NeuralNetwork:
     # loading the model and making prediction
     def predict(self, symptoms, encode=True):
         if encode:
-            symptoms = self.encode_symptom(symptoms)
-        with open('/home/iamblack/Documents/DiseasePrediction/diseasePredictionServerDjango/diseaseserver/chatbot/modertx.pkl', 'rb') as file:
-            model = pickle.load(file)
-        return disease_index[model.predict([symptoms])[0]]
+            symptoms_binary = self.encode_symptom(symptoms)
+        input_symptoms = np.array([symptoms_binary]).astype(np.float32)
+        model = load_model('/home/iamblack/Documents/DiseasePrediction/diseasePredictionServerDjango/diseaseserver/chatbot/neural_network.h5')
+        prediction = model.predict(input_symptoms)
+        class_prediction = np.argmax(prediction, axis=1)
+        predicted_disease = list(disease_index.keys())[list(disease_index.values()).index(class_prediction[0])]
+        return predicted_disease
 
     # get description of the predicted disease
 
     def disease_description(self, disease):
         df_description = pd.read_csv(
             "/home/iamblack/Documents/DiseasePrediction/diseasePredictionServerDjango/diseaseserver/chatbot/symptom_description.csv")
-        return df_description[df_description['Disease'] == disease]['Description'].values[0]
+        return df_description[df_description['Disease'] == disease.strip()]['Description'].values[0]
 
     # get precautions of the predicted disease
     def disease_precaution(self, disease):
         df_precaution = pd.read_csv(
             "/home/iamblack/Documents/DiseasePrediction/diseasePredictionServerDjango/diseaseserver/chatbot/symptom_precaution.csv")
-        return df_precaution[df_precaution['Disease'] == disease][:].values[0][1:].tolist()
+        return df_precaution[df_precaution['Disease'] == disease.strip()][:].values[0][1:].tolist()
 
 
+# testing
 # neural = NeuralNetwork()
-# reported_symptoms = ['itching', 'skin rash', 'nodal skin eruptions',
-#                      'continuous sneezing', 'shivering', 'chills', 'joint pain',]
+# reported_symptoms = ['high fever', 'runny nose', 'chills']
 
 # pred = neural.predict(reported_symptoms)
 # print(f'Predicted Disease is {pred}')
-
 # des = neural.disease_description(pred)
 # print(f'Predicted Disease Description {des}')
 
 # prec = neural.disease_precaution(pred)
 # print(f'Predicted Disease Precautions {prec}')
+    
