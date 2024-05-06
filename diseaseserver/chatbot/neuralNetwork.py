@@ -54,4 +54,16 @@ class NeuralNetwork:
 
 # prec = neural.disease_precaution(pred)
 # print(f'Predicted Disease Precautions {prec}')
+# for pred in disease_index.keys():
+#     try:
+#         print(f'Predicted Disease is {pred}')
+#         des = neural.disease_description(pred)
+#         print(f'Predicted Disease Description {des}')
+
+#         prec = neural.disease_precaution(pred)
+#         print(f'Predicted Disease Precautions {prec}')
+#     except:
+#         print(f'Error in {pred}')
+#         break
+ 
     
