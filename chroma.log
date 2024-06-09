@@ -1,0 +1,1244 @@
+[33mWARNING[0m:  [09-06-2024 10:30:45] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [09-06-2024 10:30:46] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Starting component System
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Starting component SqliteDB
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Starting component Posthog
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Starting component SegmentAPI
+[32mINFO[0m:     [09-06-2024 10:30:46] Started server process [[36m12916[0m]
+[32mINFO[0m:     [09-06-2024 10:30:46] Waiting for application startup.
+[32mINFO[0m:     [09-06-2024 10:30:46] Application startup complete.
+[31mERROR[0m:    [09-06-2024 10:30:46] [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+[32mINFO[0m:     [09-06-2024 10:30:46] Waiting for application shutdown.
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Stopping component System
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Stopping component SegmentAPI
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Stopping component Posthog
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Stopping component SqliteDB
+[36mDEBUG[0m:    [09-06-2024 10:30:46] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [09-06-2024 10:30:46] Application shutdown complete.
+[33mWARNING[0m:  [09-06-2024 10:32:07] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [09-06-2024 10:32:08] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [09-06-2024 10:32:08] Starting component System
+[36mDEBUG[0m:    [09-06-2024 10:32:08] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [09-06-2024 10:32:08] Starting component SqliteDB
+[36mDEBUG[0m:    [09-06-2024 10:32:08] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [09-06-2024 10:32:08] Starting component Posthog
+[36mDEBUG[0m:    [09-06-2024 10:32:08] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [09-06-2024 10:32:08] Starting component SegmentAPI
+[32mINFO[0m:     [09-06-2024 10:32:08] Started server process [[36m7868[0m]
+[32mINFO[0m:     [09-06-2024 10:32:08] Waiting for application startup.
+[32mINFO[0m:     [09-06-2024 10:32:08] Application startup complete.
+[32mINFO[0m:     [09-06-2024 10:32:08] Uvicorn running on [1mhttp://localhost:5000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [09-06-2024 10:35:04] ::1:55212 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:35:04] ::1:55212 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:35:08] ::1:55230 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:35:11] ::1:55230 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 10:35:11] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 10:35:11] ::1:55230 - "POST /api/v1/collections/80002169-2173-47ed-95d5-ed1e2c7b2d7c/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 10:35:11] ::1:55230 - "GET /api/v1/collections/80002169-2173-47ed-95d5-ed1e2c7b2d7c/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:35:11] ::1:55230 - "POST /api/v1/collections/80002169-2173-47ed-95d5-ed1e2c7b2d7c/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:36:46] ::1:55569 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:36:46] ::1:55569 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[31mERROR[0m:    [09-06-2024 10:36:46] Collection medrep already exists
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 105, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 100, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 118, in receive
+    return receiver.item
+           ^^^^^^^^^^^^^
+AttributeError: 'MemoryObjectItemReceiver' object has no attribute 'item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 159, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 120, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 78, in catch_exceptions_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 92, in check_http_version_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 130, in wrapper
+    return await f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 630, in create_collection
+    await to_thread.run_sync(
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 620, in process_create_collection
+    return self._api.create_collection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\api\segment.py", line 173, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 220, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.db.base.UniqueConstraintError: Collection medrep already exists
+[32mINFO[0m:     [09-06-2024 10:36:47] ::1:55570 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 500
+[32mINFO[0m:     [09-06-2024 10:38:35] ::1:55956 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:38:35] ::1:55956 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[31mERROR[0m:    [09-06-2024 10:38:35] Collection medrep already exists
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 105, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 100, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 118, in receive
+    return receiver.item
+           ^^^^^^^^^^^^^
+AttributeError: 'MemoryObjectItemReceiver' object has no attribute 'item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 159, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 120, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 78, in catch_exceptions_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 92, in check_http_version_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 130, in wrapper
+    return await f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 630, in create_collection
+    await to_thread.run_sync(
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 620, in process_create_collection
+    return self._api.create_collection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\api\segment.py", line 173, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 220, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.db.base.UniqueConstraintError: Collection medrep already exists
+[32mINFO[0m:     [09-06-2024 10:38:35] ::1:55957 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 500
+[32mINFO[0m:     [09-06-2024 10:39:23] ::1:56126 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:39:23] ::1:56126 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:39:28] ::1:56140 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:39:30] ::1:56140 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 10:39:30] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 10:39:30] ::1:56140 - "POST /api/v1/collections/b1159501-4897-4ce1-93a9-c26b8c0bfda4/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 10:39:30] ::1:56140 - "GET /api/v1/collections/b1159501-4897-4ce1-93a9-c26b8c0bfda4/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:39:30] ::1:56140 - "POST /api/v1/collections/b1159501-4897-4ce1-93a9-c26b8c0bfda4/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:43:33] ::1:57013 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:43:33] ::1:57013 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:43:38] ::1:57035 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:43:46] ::1:57035 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 10:43:46] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 10:43:47] ::1:57035 - "POST /api/v1/collections/f862c1e1-966a-4a85-ad41-af017a0a5833/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 10:43:47] ::1:57035 - "GET /api/v1/collections/f862c1e1-966a-4a85-ad41-af017a0a5833/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:43:47] ::1:57035 - "POST /api/v1/collections/f862c1e1-966a-4a85-ad41-af017a0a5833/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:45:52] ::1:57512 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:45:52] ::1:57512 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[31mERROR[0m:    [09-06-2024 10:45:56] Collection mderep3 already exists
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 105, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 100, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 118, in receive
+    return receiver.item
+           ^^^^^^^^^^^^^
+AttributeError: 'MemoryObjectItemReceiver' object has no attribute 'item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 159, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 120, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 78, in catch_exceptions_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 92, in check_http_version_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 130, in wrapper
+    return await f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 630, in create_collection
+    await to_thread.run_sync(
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 620, in process_create_collection
+    return self._api.create_collection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\api\segment.py", line 173, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 220, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.db.base.UniqueConstraintError: Collection mderep3 already exists
+[32mINFO[0m:     [09-06-2024 10:45:56] ::1:57527 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 500
+[32mINFO[0m:     [09-06-2024 10:46:40] ::1:57713 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:46:40] ::1:57713 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:46:44] ::1:57728 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:46:52] ::1:57728 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 10:46:52] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 10:46:52] ::1:57728 - "POST /api/v1/collections/aead0811-1886-4597-8ca7-6d760c895a98/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 10:46:52] ::1:57728 - "GET /api/v1/collections/aead0811-1886-4597-8ca7-6d760c895a98/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:46:52] ::1:57728 - "POST /api/v1/collections/aead0811-1886-4597-8ca7-6d760c895a98/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:48:02] ::1:58016 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:48:02] ::1:58016 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[31mERROR[0m:    [09-06-2024 10:48:02] Collection mderep4 already exists
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 105, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 100, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 118, in receive
+    return receiver.item
+           ^^^^^^^^^^^^^
+AttributeError: 'MemoryObjectItemReceiver' object has no attribute 'item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 159, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 120, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 78, in catch_exceptions_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 92, in check_http_version_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 130, in wrapper
+    return await f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 630, in create_collection
+    await to_thread.run_sync(
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 620, in process_create_collection
+    return self._api.create_collection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\api\segment.py", line 173, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 220, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.db.base.UniqueConstraintError: Collection mderep4 already exists
+[32mINFO[0m:     [09-06-2024 10:48:03] ::1:58017 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 500
+[32mINFO[0m:     [09-06-2024 10:51:36] ::1:58766 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:51:36] ::1:58766 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:51:41] ::1:58780 - "GET /api/v1/collections/mderep4?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:51:49] ::1:58780 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 0
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 1
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 2
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 3
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 4
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 5
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 6
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 7
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 8
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 9
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 10
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 11
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 12
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 13
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 14
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 15
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 16
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 17
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 18
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 19
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 20
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 21
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 22
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 23
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 24
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 25
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 26
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 27
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 28
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 29
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 30
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 31
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 32
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 33
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 34
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 35
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 36
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 37
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 38
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 39
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 40
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 41
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 42
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 43
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 44
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 45
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 46
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 47
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 48
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 49
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 50
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 51
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 52
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 53
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 54
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 55
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 56
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 57
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 58
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 59
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 60
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 61
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 62
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 63
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 64
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 65
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 66
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 67
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 68
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 69
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 70
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 71
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 72
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 73
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 74
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 75
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 76
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 77
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 78
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 79
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 80
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 81
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 82
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 83
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 84
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 85
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 86
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 87
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 88
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 89
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 90
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 91
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 92
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 93
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 94
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 95
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 96
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 97
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 98
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 99
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 100
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 101
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 102
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 103
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 104
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 105
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 106
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 107
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 108
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 109
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 110
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 111
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 112
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 113
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 114
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 115
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 116
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 117
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 118
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 119
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 120
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 121
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 122
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 123
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 124
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 125
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 126
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 127
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 128
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 129
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 130
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 131
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 132
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 133
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 134
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 135
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 136
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 137
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 138
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 139
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 140
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 141
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 142
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 143
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 144
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 145
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 146
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 147
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 148
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 149
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 150
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 151
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 152
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 153
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 154
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 155
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 156
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 157
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 158
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 159
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 160
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 161
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 162
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 163
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 164
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 165
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 166
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 167
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 168
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 169
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 170
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 171
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 172
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 173
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 174
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 175
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 176
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 177
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 178
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 179
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 180
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 181
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 182
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 183
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 184
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 185
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 186
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 187
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 188
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 189
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 190
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 191
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 192
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 193
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 194
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 195
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 196
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 197
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 198
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 199
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 200
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 201
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 202
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 203
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 204
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 205
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 206
+[33mWARNING[0m:  [09-06-2024 10:51:49] Insert of existing embedding ID: 207
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 0
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 1
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 2
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 3
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 4
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 5
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 6
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 7
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 8
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 9
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 10
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 11
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 12
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 13
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 14
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 15
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 16
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 17
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 18
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 19
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 20
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 21
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 22
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 23
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 24
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 25
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 26
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 27
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 28
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 29
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 30
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 31
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 32
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 33
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 34
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 35
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 36
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 37
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 38
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 39
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 40
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 41
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 42
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 43
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 44
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 45
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 46
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 47
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 48
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 49
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 50
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 51
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 52
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 53
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 54
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 55
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 56
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 57
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 58
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 59
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 60
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 61
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 62
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 63
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 64
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 65
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 66
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 67
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 68
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 69
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 70
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 71
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 72
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 73
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 74
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 75
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 76
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 77
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 78
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 79
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 80
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 81
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 82
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 83
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 84
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 85
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 86
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 87
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 88
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 89
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 90
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 91
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 92
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 93
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 94
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 95
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 96
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 97
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 98
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 99
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 100
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 101
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 102
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 103
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 104
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 105
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 106
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 107
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 108
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 109
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 110
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 111
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 112
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 113
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 114
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 115
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 116
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 117
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 118
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 119
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 120
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 121
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 122
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 123
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 124
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 125
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 126
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 127
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 128
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 129
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 130
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 131
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 132
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 133
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 134
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 135
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 136
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 137
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 138
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 139
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 140
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 141
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 142
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 143
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 144
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 145
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 146
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 147
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 148
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 149
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 150
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 151
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 152
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 153
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 154
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 155
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 156
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 157
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 158
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 159
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 160
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 161
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 162
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 163
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 164
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 165
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 166
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 167
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 168
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 169
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 170
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 171
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 172
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 173
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 174
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 175
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 176
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 177
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 178
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 179
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 180
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 181
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 182
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 183
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 184
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 185
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 186
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 187
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 188
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 189
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 190
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 191
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 192
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 193
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 194
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 195
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 196
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 197
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 198
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 199
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 200
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 201
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 202
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 203
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 204
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 205
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 206
+[33mWARNING[0m:  [09-06-2024 10:51:49] Add of existing embedding ID: 207
+[32mINFO[0m:     [09-06-2024 10:51:49] ::1:58780 - "POST /api/v1/collections/aead0811-1886-4597-8ca7-6d760c895a98/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 10:51:49] ::1:58780 - "GET /api/v1/collections/aead0811-1886-4597-8ca7-6d760c895a98/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:51:49] ::1:58780 - "POST /api/v1/collections/aead0811-1886-4597-8ca7-6d760c895a98/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:53:44] ::1:59203 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:53:44] ::1:59203 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[31mERROR[0m:    [09-06-2024 10:53:48] Collection mderep4 already exists
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 105, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 100, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 118, in receive
+    return receiver.item
+           ^^^^^^^^^^^^^
+AttributeError: 'MemoryObjectItemReceiver' object has no attribute 'item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 159, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 120, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 78, in catch_exceptions_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 92, in check_http_version_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 130, in wrapper
+    return await f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 630, in create_collection
+    await to_thread.run_sync(
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 620, in process_create_collection
+    return self._api.create_collection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\api\segment.py", line 173, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 220, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.db.base.UniqueConstraintError: Collection mderep4 already exists
+[32mINFO[0m:     [09-06-2024 10:53:48] ::1:59217 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 500
+[32mINFO[0m:     [09-06-2024 10:57:03] ::1:59913 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:57:03] ::1:59913 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:58:31] ::1:60228 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:58:31] ::1:60228 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:58:35] ::1:60242 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:58:44] ::1:60242 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 10:58:44] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 10:58:44] ::1:60242 - "POST /api/v1/collections/090f4239-212b-41d4-9678-6c2ce6435e0c/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 10:58:44] ::1:60242 - "GET /api/v1/collections/090f4239-212b-41d4-9678-6c2ce6435e0c/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 10:58:44] ::1:60242 - "POST /api/v1/collections/090f4239-212b-41d4-9678-6c2ce6435e0c/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:00:06] ::1:60571 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:00:06] ::1:60571 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[31mERROR[0m:    [09-06-2024 11:00:12] Collection mderep already exists
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 105, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 100, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 118, in receive
+    return receiver.item
+           ^^^^^^^^^^^^^
+AttributeError: 'MemoryObjectItemReceiver' object has no attribute 'item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 159, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\streams\memory.py", line 120, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 78, in catch_exceptions_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 92, in check_http_version_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 130, in wrapper
+    return await f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 630, in create_collection
+    await to_thread.run_sync(
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\server\fastapi\__init__.py", line 620, in process_create_collection
+    return self._api.create_collection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\api\segment.py", line 173, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 143, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\env\Lib\site-packages\chromadb\db\mixins\sysdb.py", line 220, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.db.base.UniqueConstraintError: Collection mderep already exists
+[32mINFO[0m:     [09-06-2024 11:00:12] ::1:60589 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 500
+[32mINFO[0m:     [09-06-2024 11:00:51] ::1:60727 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:00:51] ::1:60727 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:00:55] ::1:60741 - "DELETE /api/v1/collections/mderep?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:00:55] ::1:60741 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:01:03] ::1:60741 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 11:01:03] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 11:01:03] ::1:60741 - "POST /api/v1/collections/ed1ca1a9-9973-405a-9aa1-fa9820e1f158/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 11:01:03] ::1:60741 - "GET /api/v1/collections/ed1ca1a9-9973-405a-9aa1-fa9820e1f158/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:01:03] ::1:60741 - "POST /api/v1/collections/ed1ca1a9-9973-405a-9aa1-fa9820e1f158/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:02:23] ::1:61046 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:02:23] ::1:61046 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:02:27] ::1:61060 - "DELETE /api/v1/collections/mderep?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:02:27] ::1:61060 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:02:35] ::1:61060 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 11:02:35] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 11:02:35] ::1:61060 - "POST /api/v1/collections/97432f05-3fee-485d-abde-e414975fd969/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 11:02:35] ::1:61060 - "GET /api/v1/collections/97432f05-3fee-485d-abde-e414975fd969/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:02:35] ::1:61060 - "POST /api/v1/collections/97432f05-3fee-485d-abde-e414975fd969/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:03:34] ::1:61301 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:03:34] ::1:61301 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:03:34] ::1:61307 - "DELETE /api/v1/collections/mderep?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:03:34] ::1:61307 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:03:44] ::1:61307 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 11:03:44] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 11:03:45] ::1:61307 - "POST /api/v1/collections/61db2c68-4811-48e9-85cf-49f9d99a0eeb/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 11:03:45] ::1:61307 - "GET /api/v1/collections/61db2c68-4811-48e9-85cf-49f9d99a0eeb/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:03:45] ::1:61307 - "POST /api/v1/collections/61db2c68-4811-48e9-85cf-49f9d99a0eeb/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:09:58] ::1:62656 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:09:58] ::1:62656 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:10:02] ::1:62670 - "DELETE /api/v1/collections/mderep?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:10:02] ::1:62670 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:10:10] ::1:62670 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 11:10:10] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 11:10:10] ::1:62670 - "POST /api/v1/collections/910757af-aec7-4766-84b0-121bbc69e1c2/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 11:10:10] ::1:62670 - "GET /api/v1/collections/910757af-aec7-4766-84b0-121bbc69e1c2/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:10:10] ::1:62670 - "POST /api/v1/collections/910757af-aec7-4766-84b0-121bbc69e1c2/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:11:00] ::1:62884 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:11:00] ::1:62884 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:11:00] ::1:62885 - "DELETE /api/v1/collections/mderep?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:11:00] ::1:62885 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:11:03] ::1:62885 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 11:11:03] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 11:11:03] ::1:62885 - "POST /api/v1/collections/cd3f3543-ee0e-46ca-9085-c93dfffa97b3/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 11:11:03] ::1:62885 - "GET /api/v1/collections/cd3f3543-ee0e-46ca-9085-c93dfffa97b3/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:11:03] ::1:62885 - "POST /api/v1/collections/cd3f3543-ee0e-46ca-9085-c93dfffa97b3/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:12:14] ::1:63151 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:12:14] ::1:63151 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:12:14] ::1:63153 - "DELETE /api/v1/collections/mderep?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:12:14] ::1:63153 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:12:17] ::1:63153 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 11:12:17] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 11:12:17] ::1:63153 - "POST /api/v1/collections/cc43e43a-801d-46c4-810a-d275c9106505/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 11:12:17] ::1:63153 - "GET /api/v1/collections/cc43e43a-801d-46c4-810a-d275c9106505/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:12:18] ::1:63153 - "POST /api/v1/collections/cc43e43a-801d-46c4-810a-d275c9106505/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:13:10] ::1:63352 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:13:10] ::1:63352 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:13:10] ::1:63354 - "DELETE /api/v1/collections/mderep?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:13:10] ::1:63354 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:13:14] ::1:63354 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 11:13:14] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 11:13:14] ::1:63354 - "POST /api/v1/collections/1f903ac6-cfdb-4d63-9af5-96d558ee5194/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 11:13:14] ::1:63354 - "GET /api/v1/collections/1f903ac6-cfdb-4d63-9af5-96d558ee5194/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:13:14] ::1:63354 - "POST /api/v1/collections/1f903ac6-cfdb-4d63-9af5-96d558ee5194/query HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:14:52] ::1:63714 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:14:52] ::1:63714 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:14:52] ::1:63715 - "DELETE /api/v1/collections/mderep?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:14:52] ::1:63715 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:14:55] ::1:63715 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [09-06-2024 11:14:55] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [09-06-2024 11:14:55] ::1:63715 - "POST /api/v1/collections/5f7cc932-7f1a-463e-88c7-b68b257e5e8e/add HTTP/1.1" 201
+[32mINFO[0m:     [09-06-2024 11:14:55] ::1:63715 - "GET /api/v1/collections/5f7cc932-7f1a-463e-88c7-b68b257e5e8e/count HTTP/1.1" 200
+[32mINFO[0m:     [09-06-2024 11:14:55] ::1:63715 - "POST /api/v1/collections/5f7cc932-7f1a-463e-88c7-b68b257e5e8e/query HTTP/1.1" 200
