@@ -5,14 +5,20 @@ from django.db import IntegrityError
 from rest_framework.response import Response
 from rest_framework import status
 from .adax import Adax
+from .clue import Clue
+from .analyzereport import AnalyzeReport
 from .symptoms import *
 import time
 
 adax = Adax()
+clue = Clue()
+analyzereport = AnalyzeReport()
+
+# ngrok http --domain=pipefish-hip-aphid.ngrok-free.app 8000
+# chroma run --path /db_path --port 5000
+
 
 # View for user registration
-
-
 class UserRegistrationView(APIView):
     def post(self, request):
         # Retrieve email and password from request data
@@ -128,6 +134,8 @@ class DeleteAccountView(APIView):
 class ReactView(APIView):
     def post(self, request):
         session_id = request.data.get('session_id')
+        bot_name = request.data.get('bot')
+        medical_report_data = request.data.get('reporttext')
         print('Reterived session id: ', session_id)
         email = request.data.get('email')
         if session_id == '1':
@@ -135,6 +143,21 @@ class ReactView(APIView):
             print('RESETING CHAT')
             adax.reset()
         query = request.data.get('query').lower()
+
+        # chating with Clue (gemma-2b-it finetunned) model
+
+        if bot_name == "clue":
+            response = clue.invoke_clue(query)
+            dic = {'response': response}
+            print(dic)
+            return JsonResponse(dic)
+        
+        if bot_name == "areport":
+            response = analyzereport.query_report(query, medical_report_data)
+            dic = {'response': response}
+            print(dic)
+            return JsonResponse(dic)
+        
         format_template = """
         Write a response without using bold words, headings, or list. \
         Dont use any symbols in your response like `<`, `>`, `%`, `$`, `&` `-`, `*` etc. \
@@ -156,10 +179,6 @@ class ReactView(APIView):
                 dic['response'] = response
                 return JsonResponse(dic)
 
-        # time.sleep(2)
-        # response = 'hello i got you baby...'
-        # print(f'QUERY FROM USER: {query}')
-        # print(f'RESPONSE GIVEN TO USER: {response}')
         dic = {'response': response}
         print(dic)
         return JsonResponse(dic)

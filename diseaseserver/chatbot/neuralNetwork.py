@@ -23,7 +23,7 @@ class NeuralNetwork:
         if encode:
             symptoms_binary = self.encode_symptom(symptoms)
         input_symptoms = np.array([symptoms_binary]).astype(np.float32)
-        model = load_model('/home/iamblack/Documents/DiseasePrediction/diseasePredictionServerDjango/diseaseserver/chatbot/neural_network.h5')
+        model = load_model(r'C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\diseaseserver\chatbot\neural_network.h5')
         prediction = model.predict(input_symptoms)
         class_prediction = np.argmax(prediction, axis=1)
         predicted_disease = list(disease_index.keys())[list(disease_index.values()).index(class_prediction[0])]
@@ -33,13 +33,13 @@ class NeuralNetwork:
 
     def disease_description(self, disease):
         df_description = pd.read_csv(
-            "/home/iamblack/Documents/DiseasePrediction/diseasePredictionServerDjango/diseaseserver/chatbot/symptom_description.csv")
+            r"C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\diseaseserver\chatbot\symptom_description.csv")
         return df_description[df_description['Disease'] == disease.strip()]['Description'].values[0]
 
     # get precautions of the predicted disease
     def disease_precaution(self, disease):
         df_precaution = pd.read_csv(
-            "/home/iamblack/Documents/DiseasePrediction/diseasePredictionServerDjango/diseaseserver/chatbot/symptom_precaution.csv")
+            r"C:\Users\PMLS\Documents\Disease Prediction\diseasePredictionServerDjango\diseaseserver\chatbot\symptom_precaution.csv")
         return df_precaution[df_precaution['Disease'] == disease.strip()][:].values[0][1:].tolist()
 
 
