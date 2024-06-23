@@ -4,7 +4,10 @@ from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunct
 from together import Together
 from dotenv import load_dotenv
 import os
-
+import base64
+from PyPDF2 import PdfReader
+import io
+from .default_report_data import pdf_report_data
 load_dotenv()
 TOGETHER_API_KEY = os.getenv('API_KEY')
 
@@ -61,9 +64,9 @@ class AnalyzeReport:
         messages = [
             {
                 "role": "system",
-                "content": """You are a helpful medical assistent. Your users are asking questions about their medical reports. \
-                             You will be shown the user's question, and the relevant information from the medical report. \
-                             Answer the user's question using only this information. If the user asks anything unrelated to health, respond with, "I am a medical bot and can't help you here" Don't answer such queries at any cost. \ """
+                "content": """You are a helpful medical assistent. Your users are asking questions about their medical reports. 
+                             You will be shown the user's question, and the relevant information from the medical report. 
+                             Answer the user's question using only this information. If the user asks anything unrelated to health, respond with, "I am a medical bot and can't help you here" Don't answer such queries at any cost. """
             },
             {"role": "user", "content": f"Question: {query}. \n Information: {information}"}
         ]
@@ -72,9 +75,26 @@ class AnalyzeReport:
  
         return content or "Sorry try again!"
     
-    def query_report(self, query, report_text):
-        print(f'Report text {report_text}')
+    def extract_and_clean_text(self, pdf_data):
+        # Decode the base64 data
+        pdf_data = base64.b64decode(pdf_data)
+        # Use PyPDF2 to extract text
+        pdf_reader = PdfReader(io.BytesIO(pdf_data))
+        text = ""
+        for page in pdf_reader.pages:
+            text += page.extract_text()
+            return text
+    
+    def query_report(self, query, report_text, bot='dontcare'):
+        # print(f'Report text {report_text}')
         print('Analyze report is activated')
+        if bot == 'areportm':
+            # report_text = self.extract_and_clean_text(report_text)
+            # print(f'Text in bot areportm: {report_text}')
+            # print(f'Text length in bot areportm: {len(report_text)}')
+
+            report_text = pdf_report_data
+        
         token_split_texts = self.text_splitter(report_text)
         chroma_collection = self.chroma_db(token_split_texts)
 

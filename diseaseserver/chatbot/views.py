@@ -158,6 +158,12 @@ class ReactView(APIView):
             print(dic)
             return JsonResponse(dic)
         
+        if bot_name == "areportm":
+            print('Request received from mobile')
+            response = analyzereport.query_report(query, medical_report_data, bot=bot_name)
+            dic = {'response': response}
+            return JsonResponse(dic)
+        
         format_template = """
         Write a response without using bold words, headings, or list. \
         Dont use any symbols in your response like `<`, `>`, `%`, `$`, `&` `-`, `*` etc. \
