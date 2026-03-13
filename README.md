@@ -1,5 +1,7 @@
 # Healthcare AI System
 
+## [Video Demo](https://drive.google.com/drive/folders/12FXnN9DIp_Mbi3s0gFaQQg8Esf3z6JzD)
+
 ## Project Overview
 This project is an AI-powered healthcare system designed to assist users in diagnosing diseases and understanding their medical reports. It utilizes advanced deep learning and retrieval-augmented generation (RAG) techniques to enhance medical analysis and patient support.
 
@@ -36,5 +38,3 @@ This project is an AI-powered healthcare system designed to assist users in diag
 ## Future Improvements
 - Enhance dataset diversity for better generalization.
 - Expand disease coverage beyond 130 illnesses.
-
-
